@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Ap1 | sort -k1.1,1n -k1.2d | tr '\n' ',' | sed 's/,$/\n/'
+ls -a | awk -v ORS=',' '/^[.0-9a-zA-Z]/ {print $0} END {print "\n"}' | sed 's/,$/\n/'
