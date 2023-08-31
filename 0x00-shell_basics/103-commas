@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a | awk -v ORS=',' '/^[.0-9a-zA-Z]/ {print $0} END {print "\n"}' | sed 's/,$/\n/'
+ls -amvop
