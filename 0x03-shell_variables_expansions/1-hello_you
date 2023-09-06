@@ -1,2 +1,7 @@
 #!/bin/bash
-echo "hello user $current_user"
+# Get the current user's UID
+current_uid=$(id -u)
+# Get the username associated with the UID
+current_user=$(id -nu $current_uid)
+# Print the greeting
+echo "Hello $current_user!"
