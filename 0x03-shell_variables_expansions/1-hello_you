@@ -1,2 +1,2 @@
 #!/bin/bash
-$(id -u) $(id -nu) $current_uid echo "Hello $current_user"
+echo hello $USER
